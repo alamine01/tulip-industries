@@ -11,7 +11,7 @@ export default function Header() {
     [0, 50],
     ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.95)"]
   );
-  const paddingY = useTransform(scrollY, [0, 50], ["16px", "8px"]);
+  const paddingY = useTransform(scrollY, [0, 50], ["24px", "8px"]);
   const shadow = useTransform(
     scrollY,
     [0, 50],
@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <motion.header 
       style={{ backgroundColor, paddingTop: paddingY, paddingBottom: paddingY, boxShadow: shadow }}
-      className="fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 z-50 w-full transition-all duration-300 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
